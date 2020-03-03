@@ -9,7 +9,7 @@ import applyWithDispatch from '../utils/withDispatch';
 /**
  * WordPress dependencies
  */
-const { _x } = wp.i18n;
+const { _n, sprintf } = wp.i18n;
 const { select } = wp.data;
 const { compose } = wp.compose;
 const { serialize } = wp.blocks;
@@ -45,7 +45,8 @@ export default compose(
 				onCopy,
 				getSelectedBlock
 			} = this.props,
-			getMultiSelectedBlocks = select( 'core/block-editor' ).getMultiSelectedBlocks();
+			getMultiSelectedBlocks = select( 'core/block-editor' ).getMultiSelectedBlocks(),
+			numBlocks = size( getMultiSelectedBlocks ) + 1;
 
 			if ( ! getSelectedBlock && size( getMultiSelectedBlocks ) < 1 ) return false;
 
@@ -61,7 +62,10 @@ export default compose(
 									paddingLeft: '0'
 								} }
 							>
-								{ _x( 'Copy Block', 'button label', 'block-copy' ) }
+								{ 
+									/* translators: %s: number of blocks selected. */
+									sprintf( _n( 'Copy Block', 'Copy %s Blocks', numBlocks, 'block-copy' ), numBlocks ) 
+								}
 							</ClipboardButton>
 						}
 						onClick={ () => {} }

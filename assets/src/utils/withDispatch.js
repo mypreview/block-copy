@@ -20,6 +20,7 @@ const applyWithDispatch = withDispatch( dispatch => {
         onCopy() {
 			const selectedBlocks = select( 'core/block-editor' ).getMultiSelectedBlocks(),
 			numBlocks = size( selectedBlocks ),
+			/* translators: %s: number of blocks selected. */
 			notice = sprintf( _n( 'A single block copied.', '%s blocks copied.', numBlocks, 'block-copy' ), numBlocks );
 
 			createNotice(
