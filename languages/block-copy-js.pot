@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"X-Generator: babel-plugin-makepot\n"
+
+#: assets/src/utils/withDispatch.js:23
+msgid "A single block copied."
+msgid_plural "%s blocks copied."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/src/components/Copy.jsx:64
+msgctxt "button label"
+msgid "Copy Block"
+msgstr ""
