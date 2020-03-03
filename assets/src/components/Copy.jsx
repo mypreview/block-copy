@@ -46,7 +46,7 @@ export default compose(
 				getSelectedBlock
 			} = this.props,
 			getMultiSelectedBlocks = select( 'core/block-editor' ).getMultiSelectedBlocks(),
-			numBlocks = size( getMultiSelectedBlocks ) + 1;
+			numBlocks = size( getMultiSelectedBlocks );
 
 			if ( ! getSelectedBlock && size( getMultiSelectedBlocks ) < 1 ) return false;
 
@@ -64,7 +64,7 @@ export default compose(
 							>
 								{ 
 									/* translators: %s: number of blocks selected. */
-									sprintf( _n( 'Copy Block', 'Copy %s Blocks', numBlocks, 'block-copy' ), numBlocks ) 
+									sprintf( _n( 'Copy Block', 'Copy %s Blocks', numBlocks + 1, 'block-copy' ), numBlocks ) 
 								}
 							</ClipboardButton>
 						}
