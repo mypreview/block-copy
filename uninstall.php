@@ -1,6 +1,6 @@
 <?php
 /**
- * Unistall Container Block.
+ * Unistall Block Copy.
  * Fired when the plugin is uninstalled.
  *
  * @author      Mahdi Yazdani
