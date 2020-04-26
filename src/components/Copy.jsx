@@ -51,23 +51,29 @@ export default compose(
 					<PluginBlockSettingsMenuItem
 						icon={ icon }
 						label={
-							<ClipboardButton
-								onCopy={ onCopy }
-								text={ this.getSelection() }
+							<div
 								style={ {
-									color: 'inherit',
-									background: 'transparent',
-									height: 'auto',
-									paddingLeft: '0',
-									boxShadow: 'none',
+									width: '100%',
 								} }
 							>
-								{ /* translators: %s: number of blocks selected. */
-								sprintf(
-									_n( 'Copy Block', 'Copy %s Blocks', numBlocks + 1, 'block-copy' ),
-									numBlocks
-								) }
-							</ClipboardButton>
+								<ClipboardButton
+									onCopy={ onCopy }
+									text={ this.getSelection() }
+									style={ {
+										color: 'inherit',
+										background: 'transparent',
+										height: 'auto',
+										paddingLeft: '0',
+										boxShadow: 'none',
+									} }
+								>
+									{ /* translators: %s: number of blocks selected. */
+									sprintf(
+										_n( 'Copy Block', 'Copy %s Blocks', numBlocks + 1, 'block-copy' ),
+										numBlocks
+									) }
+								</ClipboardButton>
+							</div>
 						}
 						onClick={ () => {} }
 					></PluginBlockSettingsMenuItem>
