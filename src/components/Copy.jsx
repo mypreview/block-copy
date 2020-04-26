@@ -53,7 +53,9 @@ export default compose(
 						label={
 							<div
 								style={ {
-									width: '100%',
+									width: 'calc(100% + 21px)',
+									display: 'inline-grid',
+									margin: '0 -30px',
 								} }
 							>
 								<ClipboardButton
@@ -63,8 +65,9 @@ export default compose(
 										color: 'inherit',
 										background: 'transparent',
 										height: 'auto',
-										paddingLeft: '0',
+										paddingLeft: '30px',
 										boxShadow: 'none',
+										width: '100%',
 									} }
 								>
 									{ /* translators: %s: number of blocks selected. */
