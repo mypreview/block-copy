@@ -1,5 +1,8 @@
 # Block Copy
 
+## Note:
+This plugin is deprecated in favor of built-in version of Copy API present within the [Gutenberg](https://github.com/WordPress/Gutenberg) plugin.
+
 ## Installation
 
 * Download the plugin from it's GitHub Repository Release window.
